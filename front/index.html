@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta - Rede Social</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="logo" href="#">Insta<span>.</span></a>
+        <p>Compartilhe seus momentos</p>
+    </header>
+
+    <main class="container">
+        <section class="card" id="cadastro-card">
+            <h1>Crie sua conta</h1>
+            <p class="subtitulo">Entre para a comunidade!</p>
+
+            <form id="cadastro-form">
+                <label for="nome">Nome</label>
+                <input id="nome" name="nome" type="text" required>
+
+                <label for="username">Nome de usuário</label>
+                <input id="username" name="username" type="text" required>
+
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" required>
+
+                <label for="senha">Senha</label>
+                <input id="senha" name="senha" type="password" required>
+
+                <button type="submit">Criar conta</button>
+            </form>
+
+            <p id="cadastro-mensagem" class="mensagem" aria-live="polite"></p>
+        </section>
+
+        <section class="card feed-card">
+            <div class="feed-cabecalho">
+                <div>
+                    <h1>Feed</h1>
+                    <p class="subtitulo">Veja o que a comunidade compartilhou.</p>
+                </div>
+                <button id="atualizar-feed" class="botao-secundario" type="button">
+                    Atualizar
+                </button>
+            </div>
+
+            <section id="nova-publicacao" class="nova-publicacao">
+                <h2>Compartilhe algo</h2>
+
+                <form id="publicacao-form">
+                    <label for="legenda">Legenda</label>
+                    <textarea id="legenda" name="legenda" rows="3"
+                              placeholder="O que você quer compartilhar?" required></textarea>
+
+                    <label for="imagem-url">Link da imagem (opcional)</label>
+                    <input id="imagem-url" name="imagem_url" type="url"
+                           placeholder="https://...">
+
+                    <button type="submit">Publicar</button>
+                </form>
+
+                <p id="publicacao-mensagem" class="mensagem" aria-live="polite"></p>
+            </section>
+
+            <div id="feed" class="feed">
+                <p class="estado-feed">Carregando publicações...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Conecta — um espaço para compartilhar ideias.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
